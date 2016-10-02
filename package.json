@@ -1,0 +1,40 @@
+{
+	"name": "shn-ladder-bot",
+	"version": "0.1.0",
+	"description": "A server-side bot for our ladder system.",
+
+	"engines": {
+		"node": "6.5.0"
+	},
+
+	"main": "bin/main.js",
+
+	"bugs": {
+		"url": "https://github.com/club-shen/ladder-bot/issues"
+	},
+
+	"dependencies": {
+		"firebase": "latest",
+		"discord.js": "latest",
+		"shn-ladder-api": "git+https://github.com/club-shen/shn-ladder-api"
+	},
+
+	"coffeelintConfig": {
+		"no_tabs" : {
+			"level" : "ignore",
+			"value" : 4
+		},
+		"indentation": {
+			"level": "warn",
+			"value": 1
+		},
+		"max_line_length": {
+			"level": "ignore"
+		}
+	},
+
+	"scripts": {
+		"preinstall": "npm install coffee-script",
+		"postinstall": "coffee -o bin -c src"
+	}
+}
